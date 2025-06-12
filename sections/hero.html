@@ -1,0 +1,31 @@
+<!-- Hero Section -->
+<section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+    <video autoplay muted loop class="hero-video">
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-countryside-meadow-4075-large.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay absolute inset-0"></div>
+    <div class="container mx-auto px-6 z-10 text-center">
+        <h2 class="handwritten text-6xl md:text-8xl text-white mb-4 animate-pulse transition-transform duration-700 ease-in-out hover:scale-110">Ficurinia</h2>
+        <h3 class="heading text-4xl md:text-6xl text-white mb-8 transition-transform duration-700 ease-in-out hover:scale-105">Fichi d'India di Bubbonia San Cono</h3>
+        <p class="text-2xl text-white mb-12 max-w-3xl mx-auto body-text opacity-0 animate-fadeIn">Coltivati con passione nella soleggiata Sicilia, seguendo le antiche tradizioni contadine</p>
+        <a href="#about" class="inline-block bg-terracotta hover:bg-amber-800 text-white px-10 py-5 rounded-full text-xl font-medium transition duration-300 transform hover:scale-105 rustic-btn">Scopri la nostra tradizione</a>
+    </div>
+    <div class="absolute bottom-10 left-0 right-0 flex justify-center">
+        <a href="#about" class="text-white animate-bounce transition-transform duration-700 ease-in-out hover:scale-110">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </a>
+    </div>
+</section>
+
+<style>
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.animate-fadeIn {
+  animation: fadeIn 2s ease forwards;
+}
+</style>
