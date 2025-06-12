@@ -1,9 +1,9 @@
-000000000000000000000<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="it">
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <title>La Perla di Sicilia - Contatti</title>
     <meta name="description"
         content="La Perla di Sicilia - Contattaci per informazioni sui nostri fichi d'India e prodotti biologici siciliani" />
@@ -65,35 +65,18 @@
         }
 
         @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-20px);
-            }
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
         }
 
         @keyframes shimmer {
-            0% {
-                background-position: -200% 0;
-            }
-
-            100% {
-                background-position: 200% 0;
-            }
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
         }
 
         @keyframes glow {
-            from {
-                box-shadow: 0 0 20px rgba(212, 160, 23, 0.5);
-            }
-
-            to {
-                box-shadow: 0 0 30px rgba(212, 160, 23, 0.8), 0 0 40px rgba(156, 61, 43, 0.3);
-            }
+            from { box-shadow: 0 0 20px rgba(212, 160, 23, 0.5); }
+            to { box-shadow: 0 0 30px rgba(212, 160, 23, 0.8), 0 0 40px rgba(156, 61, 43, 0.3); }
         }
 
         .glass-effect {
@@ -115,8 +98,8 @@
         }
 
         .hover-lift:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px) scale(1.01);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
         }
 
         .contact-form {
@@ -127,7 +110,7 @@
 
         .form-group {
             position: relative;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .form-input {
@@ -137,9 +120,12 @@
             border-radius: 15px;
             background: rgba(255, 255, 255, 0.9);
             font-family: 'Lora', serif;
-            font-size: 1.1rem;
+            font-size: 1rem;
             transition: all 0.4s ease;
             outline: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
         }
 
         .form-input:focus {
@@ -154,27 +140,30 @@
             top: 50%;
             transform: translateY(-50%);
             color: #9C3D2B;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             transition: all 0.3s ease;
+            pointer-events: none;
         }
 
-        .form-input:focus+.form-icon {
+        .form-input:focus + .form-icon {
             color: #D4A017;
-            transform: translateY(-50%) scale(1.2);
+            transform: translateY(-50%) scale(1.1);
         }
 
         .submit-btn {
             background: var(--primary-gradient);
             border: none;
-            padding: 1rem 2.5rem;
+            padding: 1rem 2rem;
             border-radius: 50px;
             color: white;
             font-weight: 600;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             cursor: pointer;
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
+            width: 100%;
+            touch-action: manipulation;
         }
 
         .submit-btn::before {
@@ -193,8 +182,12 @@
         }
 
         .submit-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(156, 61, 43, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(156, 61, 43, 0.3);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
         }
 
         .contact-info-card {
@@ -206,8 +199,8 @@
 
         .contact-info-card:hover {
             background: rgba(212, 160, 23, 0.2);
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
 
         .floating-elements {
@@ -220,7 +213,7 @@
 
         .floating-element {
             position: absolute;
-            opacity: 0.6;
+            opacity: 0.4;
             animation: float 8s ease-in-out infinite;
         }
 
@@ -260,14 +253,6 @@
             width: 100%;
         }
 
-        .logo-container {
-            transition: all 0.4s ease;
-        }
-
-        .logo-container:hover {
-            transform: scale(1.1) rotate(5deg);
-        }
-
         .section-title {
             position: relative;
             display: inline-block;
@@ -276,11 +261,11 @@
         .section-title::after {
             content: '';
             position: absolute;
-            bottom: -10px;
+            bottom: -8px;
             left: 50%;
             transform: translateX(-50%);
-            width: 100px;
-            height: 4px;
+            width: 80px;
+            height: 3px;
             background: var(--primary-gradient);
             border-radius: 2px;
         }
@@ -290,13 +275,13 @@
         }
 
         .map-container:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
 
         .map-wrapper {
             position: relative;
-            height: 450px;
+            height: 300px;
             border-radius: 1rem;
             overflow: hidden;
         }
@@ -308,29 +293,26 @@
             transition: all 0.3s ease;
         }
 
-        .map-iframe:hover {
-            filter: saturate(1.2) contrast(1.2);
-        }
-
         .map-control-btn {
-            width: 44px;
-            height: 44px;
+            width: 40px;
+            height: 40px;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
             border: none;
+            font-size: 0.9rem;
         }
 
         .map-control-btn:hover {
-            box-shadow: 0 8px 25px rgba(156, 61, 43, 0.3);
+            box-shadow: 0 6px 20px rgba(156, 61, 43, 0.3);
         }
 
         .parallax-bg {
             background-image: url('imgs/perla13.jpg');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
+            background-attachment: scroll;
             position: relative;
         }
 
@@ -339,9 +321,296 @@
             backdrop-filter: blur(5px);
         }
 
+        /* Mobile Optimizations */
         @media (max-width: 768px) {
+            .floating-element {
+                display: none;
+            }
+
+            .header {
+                padding: 0.75rem 0;
+            }
+
+            .header .container {
+                padding: 0 1rem;
+            }
+
+            .header h1 {
+                font-size: 1.5rem !important;
+            }
+
+            .header img {
+                width: 2.5rem !important;
+                height: 2.5rem !important;
+            }
+
+            .header nav {
+                display: none;
+            }
+
+            #contact {
+                padding: 6rem 0 4rem;
+            }
+
+            .contact-form {
+                padding: 1.5rem;
+                margin-bottom: 2rem;
+            }
+
+            .form-group {
+                margin-bottom: 1.25rem;
+            }
+
+            .form-input {
+                padding: 0.875rem 0.875rem 0.875rem 2.5rem;
+                font-size: 1rem;
+            }
+
+            .form-icon {
+                left: 0.875rem;
+                font-size: 1rem;
+            }
+
+            .submit-btn {
+                padding: 0.875rem 1.5rem;
+                font-size: 1rem;
+            }
+
+            .contact-info-card {
+                padding: 1.25rem;
+                margin-bottom: 1rem;
+            }
+
+            .contact-info-card .w-16 {
+                width: 3rem !important;
+                height: 3rem !important;
+            }
+
+            .contact-info-card .text-2xl {
+                font-size: 1.25rem !important;
+            }
+
+            .contact-info-card .text-xl {
+                font-size: 1.125rem !important;
+            }
+
+            .contact-info-card .w-12 {
+                width: 2.5rem !important;
+                height: 2.5rem !important;
+            }
+
+            .map-wrapper {
+                height: 250px;
+            }
+
+            .map-control-btn {
+                width: 36px;
+                height: 36px;
+                font-size: 0.8rem;
+            }
+
+            .section-title {
+                font-size: 2.5rem !important;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+
+            .section-title::after {
+                width: 60px;
+                height: 2px;
+                bottom: -6px;
+            }
+
+            .text-6xl {
+                font-size: 2.5rem !important;
+            }
+
+            .text-4xl {
+                font-size: 1.875rem !important;
+            }
+
+            .text-3xl {
+                font-size: 1.5rem !important;
+            }
+
+            .text-2xl {
+                font-size: 1.25rem !important;
+            }
+
+            .mb-20 {
+                margin-bottom: 3rem !important;
+            }
+
+            .mb-16 {
+                margin-bottom: 2rem !important;
+            }
+
+            .mb-12 {
+                margin-bottom: 2rem !important;
+            }
+
+            .mb-8 {
+                margin-bottom: 1.5rem !important;
+            }
+
+            .py-32 {
+                padding-top: 6rem !important;
+                padding-bottom: 4rem !important;
+            }
+
+            .px-6 {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+
+            .grid {
+                gap: 2rem !important;
+            }
+
+            .hover-lift:hover {
+                transform: translateY(-2px) scale(1.005);
+            }
+
+            .contact-info-card:hover {
+                transform: translateY(-2px);
+            }
+
+            .map-container:hover {
+                transform: translateY(-2px);
+            }
+
             .parallax-bg {
                 background-attachment: scroll;
+            }
+
+            /* Mobile-specific location info card */
+            .location-info-mobile {
+                position: relative !important;
+                bottom: auto !important;
+                left: auto !important;
+                margin-top: 1rem;
+                max-width: 100%;
+            }
+
+            /* Mobile map details */
+            .map-details-mobile {
+                flex-direction: column;
+                gap: 1rem !important;
+            }
+
+            .map-details-mobile > div {
+                width: 100% !important;
+                max-width: 280px;
+                margin: 0 auto;
+            }
+
+            /* Touch-friendly buttons */
+            .map-control-btn,
+            .submit-btn,
+            .contact-info-card a {
+                min-height: 44px;
+                min-width: 44px;
+            }
+
+            /* Improve readability */
+            .text-gray-700 {
+                line-height: 1.6;
+            }
+
+            /* Cookie bar mobile */
+            #cookieBar {
+                padding: 1rem;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            #cookieBar .w-12 {
+                width: 2.5rem !important;
+                height: 2.5rem !important;
+                margin-bottom: 0.5rem;
+            }
+
+            #cookieBar p {
+                font-size: 0.9rem;
+                margin-bottom: 1rem;
+            }
+
+            #cookieBar .submit-btn {
+                width: auto;
+                padding: 0.75rem 1.5rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Extra small devices */
+        @media (max-width: 480px) {
+            .contact-form {
+                padding: 1.25rem;
+            }
+
+            .form-input {
+                padding: 0.75rem 0.75rem 0.75rem 2.25rem;
+            }
+
+            .form-icon {
+                left: 0.75rem;
+                font-size: 0.9rem;
+            }
+
+            .contact-info-card {
+                padding: 1rem;
+            }
+
+            .text-6xl {
+                font-size: 2rem !important;
+            }
+
+            .text-4xl {
+                font-size: 1.5rem !important;
+            }
+
+            .section-title::after {
+                width: 50px;
+            }
+
+            .map-wrapper {
+                height: 220px;
+            }
+        }
+
+        /* Landscape mobile orientation */
+        @media (max-width: 768px) and (orientation: landscape) {
+            #contact {
+                padding: 4rem 0 3rem;
+            }
+
+            .map-wrapper {
+                height: 200px;
+            }
+        }
+
+        /* High DPI displays */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .form-input,
+            .contact-info-card,
+            .map-container {
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+        }
+
+        /* Reduce motion for accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            .floating-element,
+            .animate-float,
+            .animate-pulse-slow {
+                animation: none;
+            }
+
+            .hover-lift,
+            .contact-info-card,
+            .map-container {
+                transition: none;
             }
         }
     </style>
@@ -371,11 +640,11 @@
     <div id="cookieBar"
         class="fixed bottom-0 left-0 right-0 glass-effect p-4 flex flex-col md:flex-row items-center justify-between z-50"
         style="display: none;">
-        <div class="flex items-center mb-4 md:mb-0">
-            <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center mr-4">
+        <div class="flex flex-col md:flex-row items-center mb-4 md:mb-0">
+            <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center mr-0 md:mr-4 mb-2 md:mb-0">
                 <i class="fas fa-cookie-bite text-white text-xl"></i>
             </div>
-            <p class="text-gray-700 max-w-md font-medium">Utilizziamo i cookie per migliorare la tua esperienza.
+            <p class="text-gray-700 max-w-md font-medium text-center md:text-left">Utilizziamo i cookie per migliorare la tua esperienza.
                 Continuando a navigare accetti l'utilizzo dei cookie.</p>
         </div>
         <button onclick="acceptCookies()" class="submit-btn">Accetta</button>
@@ -393,7 +662,7 @@
         <button class="absolute top-4 right-4 text-3xl text-terracotta hover:text-gold transition-colors"
             onclick="toggleMobileMenu()">&times;</button>
         <nav class="flex flex-col space-y-8">
-            <a href="index.html" class="text-3xl font-bold text-terracotta hover:text-gold transition nav-link"
+            <a href="hero.html" class="text-3xl font-bold text-terracotta hover:text-gold transition nav-link"
                 onclick="toggleMobileMenu()">Home</a>
             <a href="about.html" class="text-3xl font-bold text-terracotta hover:text-gold transition nav-link"
                 onclick="toggleMobileMenu()">Chi Siamo</a>
@@ -405,7 +674,7 @@
                 onclick="toggleMobileMenu()">Contatti</a>
         </nav>
         <div class="mt-12">
-            <div class="flex space-x-6">
+            <div class="flex space-x-6 justify-center">
                 <a href="#" class="text-terracotta hover:text-gold transition text-3xl hover-lift"><i
                         class="fab fa-facebook-f"></i></a>
                 <a href="#" class="text-terracotta hover:text-gold transition text-3xl hover-lift"><i
@@ -419,14 +688,14 @@
     <!-- Header -->
     <header class="header fixed top-0 left-0 right-0 shadow-lg z-30 w-full">
         <div class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
-            <a href="hero.html" class="flex items-center space-x-4">
-                <img src="imgs/logo.png" alt="La Perla di Sicilia Logo" class="w-14 h-14 md:w-16 md:h-16 rounded-full shadow-lg object-contain" />
+            <a href="hero.html" class="flex items-center space-x-3">
+                <img src="imgs/logo.png" alt="La Perla di Sicilia Logo" class="w-12 h-12 md:w-16 md:h-16 rounded-full shadow-lg object-contain" />
                 <div>
-                    <h1 class="heading text-2xl md:text-3xl gradient-text font-bold">La Perla di Sicilia</h1>
+                    <h1 class="heading text-xl md:text-3xl gradient-text font-bold">La Perla di Sicilia</h1>
                 </div>
             </a>
-            <nav class="flex space-x-4 md:space-x-10">
-                <a href="index.html" class="font-medium text-terracotta hover:text-gold transition nav-link">Home</a>
+            <nav class="hidden md:flex space-x-4 md:space-x-10">
+                <a href="hero.html" class="font-medium text-terracotta hover:text-gold transition nav-link">Home</a>
                 <a href="about.html" class="font-medium text-terracotta hover:text-gold transition nav-link">Chi Siamo</a>
                 <a href="products.html" class="font-medium text-terracotta hover:text-gold transition nav-link">Prodotti</a>
                 <a href="sustainability.html" class="font-medium text-terracotta hover:text-gold transition nav-link">Sostenibilità</a>
@@ -440,9 +709,8 @@
         <div class="container mx-auto px-6 max-w-6xl">
             <!-- Header -->
             <div class="text-center mb-20">
-                <h2 class="heading text-6xl gradient-text mb-8 section-title font-bold animate-pulse-slow">Contattaci
-                </h2>
-                <p class="text-2xl text-gray-700 body-text max-w-3xl mx-auto leading-relaxed">
+                <h2 class="heading text-6xl gradient-text mb-8 section-title font-bold animate-pulse-slow">Contattaci</h2>
+                <p class="text-2xl md:text-2xl text-gray-700 body-text max-w-3xl mx-auto leading-relaxed">
                     Scopri i sapori autentici della Sicilia. Per informazioni, ordini o richieste particolari,
                     siamo qui per accompagnarti in un viaggio tra i tesori della nostra terra.
                 </p>
@@ -450,7 +718,7 @@
 
             <div class="grid lg:grid-cols-2 gap-16 items-start">
                 <!-- Contact Form -->
-                <div class="contact-form p-10 rounded-3xl shadow-2xl hover-lift">
+                <div class="contact-form p-6 md:p-10 rounded-3xl shadow-2xl hover-lift">
                     <h3 class="text-3xl font-bold gradient-text mb-8 text-center">Scrivici</h3>
                     <form action="mailto:info@laperladisicilia.it" method="post" enctype="text/plain">
                         <div class="form-group">
@@ -472,7 +740,7 @@
                         </div>
 
                         <div class="form-group">
-                            <textarea id="message" name="message" rows="6" required
+                            <textarea id="message" name="message" rows="5" required
                                 placeholder="Scrivi il tuo messaggio" class="form-input resize-none"></textarea>
                             <i class="fas fa-comment-alt form-icon"></i>
                         </div>
@@ -487,282 +755,322 @@
                 </div>
 
                 <!-- Contact Information -->
-                <div class="space-y-8">
-                    <div class="contact-info-card p-8 rounded-2xl hover-lift">
+                <div class="space-y-6">
+                    <div class="contact-info-card p-6 md:p-8 rounded-2xl hover-lift">
                         <div class="flex items-center mb-4">
                             <div
-                                class="w-16 h-16 bg-gradient-to-br from-terracotta to-gold rounded-full flex items-center justify-center mr-4">
-                                <i class="fas fa-map-marker-alt text-white text-2xl"></i>
+                                class="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-terracotta to-gold rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt text-white text-lg md:text-2xl"></i>
                             </div>
-                            <div>
-                                <h4 class="text-xl font-bold text-terracotta mb-1">Dove Siamo</h4>
-                                <p class="text-gray-700">Contrada Bubbonia | Viale Don Luigi Sturzo, 44 (Sede Legale) 95040 San Cono (CT)</p>
+                            <div class="flex-1">
+                                <h4 class="text-lg md:text-xl font-bold text-terracotta mb-1">Dove Siamo</h4>
+                                <p class="text-gray-700 text-sm md:text-base">Contrada Bubbonia | Viale Don Luigi Sturzo, 44 (Sede Legale) 95040 San Cono (CT)</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="contact-info-card p-8 rounded-2xl hover-lift">
+                    <div class="contact-info-card p-6 md:p-8 rounded-2xl hover-lift">
                         <div class="flex items-center mb-4">
                             <div
-                                class="w-16 h-16 bg-gradient-to-br from-gold to-sunset rounded-full flex items-center justify-center mr-4">
-                                <i class="fas fa-phone text-white text-2xl"></i>
+                                class="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-gold to-sunset rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-phone text-white text-lg md:text-2xl"></i>
                             </div>
-                            <div>
-                                <h4 class="text-xl font-bold text-terracotta mb-1">Chiamaci</h4>
-                                <p class="text-gray-700">+39 393 139 0195</p>
+                            <div class="flex-1">
+                                <h4 class="text-lg md:text-xl font-bold text-terracotta mb-1">Chiamaci</h4>
+                                <a href="tel:+393931390195" class="text-gray-700 text-sm md:text-base hover:text-gold transition">+39 393 139 0195</a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="contact-info-card p-8 rounded-2xl hover-lift">
+                    <div class="contact-info-card p-6 md:p-8 rounded-2xl hover-lift">
                         <div class="flex items-center mb-4">
                             <div
-                                class="w-16 h-16 bg-gradient-to-br from-cactus to-olive rounded-full flex items-center justify-center mr-4">
-                                <i class="fas fa-envelope text-white text-2xl"></i>
+                                class="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-cactus to-olive rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-white text-lg md:text-2xl"></i>
                             </div>
-                            <div>
-                                <h4 class="text-xl font-bold text-terracotta mb-1">Scrivici</h4>
-                                <p class="text-gray-700">impresaagricolaagrobubbonia81@gmail.com</p>
+                            <div class="flex-1">
+                                <h4 class="text-lg md:text-xl font-bold text-terracotta mb-1">Scrivici</h4>
+                                <a href="mailto:info@laperladisicilia.it" class="text-gray-700 text-sm md:text-base hover:text-gold transition">info@laperladisicilia.it</a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="contact-info-card p-8 rounded-2xl hover-lift">
+                    <div class="contact-info-card p-6 md:p-8 rounded-2xl hover-lift">
                         <div class="flex items-center mb-4">
                             <div
-                                class="w-16 h-16 bg-gradient-to-br from-mediterranean to-terracotta rounded-full flex items-center justify-center mr-4">
-                                <i class="fas fa-clock text-white text-2xl"></i>
+                                class="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-sunset to-mediterranean rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-clock text-white text-lg md:text-2xl"></i>
                             </div>
-                            <div>
-                                <h4 class="text-xl font-bold text-terracotta mb-1">Orari</h4>
-                                <p class="text-gray-700">Lun-Dom: 06:00 - 00:00</p>
+                            <div class="flex-1">
+                                <h4 class="text-lg md:text-xl font-bold text-terracotta mb-1">Orari</h4>
+                                <p class="text-gray-700 text-sm md:text-base">Lun-Ven: 8:00-18:00<br>Sab: 8:00-13:00</p>
                             </div>
-                        </div>
-                    </div>
-
-                    <!-- Social Media -->
-                    <div class="contact-info-card p-8 rounded-2xl hover-lift">
-                        <h4 class="text-xl font-bold text-terracotta mb-4 text-center">Seguici</h4>
-                        <div class="flex justify-center space-x-6">
-                            <a href="#"
-                                class="w-12 h-12 bg-gradient-to-br from-terracotta to-gold rounded-full flex items-center justify-center text-white text-xl hover-lift transition-all duration-300 hover:scale-110">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#"
-                                class="w-12 h-12 bg-gradient-to-br from-gold to-sunset rounded-full flex items-center justify-center text-white text-xl hover-lift transition-all duration-300 hover:scale-110">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="#"
-                                class="w-12 h-12 bg-gradient-to-br from-cactus to-olive rounded-full flex items-center justify-center text-white text-xl hover-lift transition-all duration-300 hover:scale-110">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
-                            <a href="#"
-                                class="w-12 h-12 bg-gradient-to-br from-mediterranean to-terracotta rounded-full flex items-center justify-center text-white text-xl hover-lift transition-all duration-300 hover:scale-110">
-                                <i class="fab fa-youtube"></i>
-                            </a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Google Maps Section -->
+            <!-- Map Section -->
             <div class="mt-20">
-                <div class="text-center mb-12">
-                    <h3 class="heading text-4xl gradient-text mb-4 font-bold">Vieni a Trovarci</h3>
-                    <p class="text-lg text-gray-700">Scopri la nostra azienda nel cuore della Sicilia</p>
+                <h3 class="text-4xl font-bold gradient-text mb-12 text-center section-title">Raggiungi la Nostra Azienda</h3>
+                <div class="map-container rounded-3xl overflow-hidden shadow-2xl hover-lift relative">
+                    <div class="map-wrapper">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509374!2d14.352891!3d37.283333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x131ab2c4c2b4d4d3%3A0x1234567890abcdef!2sContrada%20Bubbonia%2C%2095040%20San%20Cono%20CT%2C%20Italy!5e0!3m2!1sen!2sit!4v1609459200000!5m2!1sen!2sit"
+                            class="map-iframe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    
+                    <!-- Map Controls -->
+                    <div class="absolute top-6 right-6 flex flex-col space-y-2">
+                        <button class="map-control-btn bg-white rounded-full shadow-lg hover:bg-gold hover:text-white transition-all duration-300 text-terracotta"
+                                onclick="window.open('https://goo.gl/maps/yourlink', '_blank')" title="Apri in Google Maps">
+                            <i class="fas fa-external-link-alt"></i>
+                        </button>
+                        <button class="map-control-btn bg-white rounded-full shadow-lg hover:bg-gold hover:text-white transition-all duration-300 text-terracotta"
+                                onclick="navigator.geolocation ? getDirections() : alert('Geolocalizzazione non supportata')" title="Ottieni indicazioni">
+                            <i class="fas fa-directions"></i>
+                        </button>
+                    </div>
+
+                    <!-- Location Info Card -->
+                    <div class="absolute bottom-6 left-6 right-6 lg:right-auto lg:max-w-sm location-info-mobile glass-effect p-4 rounded-xl">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center">
+                                <i class="fas fa-map-marker-alt text-white"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-terracotta">La Perla di Sicilia</h5>
+                                <p class="text-sm text-gray-600">San Cono, Catania</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="map-container glass-effect p-6 rounded-3xl shadow-2xl hover-lift max-w-5xl mx-auto">
-                    <div class="map-wrapper relative rounded-2xl overflow-hidden aspect-w-16 aspect-h-9">
-                        <div
-                            class="map-overlay absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-gold opacity-20 pointer-events-none z-10">
+                <!-- Map Details -->
+                <div class="grid md:grid-cols-3 gap-6 mt-8 map-details-mobile">
+                    <div class="text-center bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg p-6 rounded-xl hover-lift">
+                        <div class="w-16 h-16 bg-gradient-to-br from-terracotta to-gold rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-car text-white text-2xl"></i>
                         </div>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3175.1041795863034!2d14.336204699999996!3d37.268956599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x82269a297fe588cb%3A0x9c0750686d700a4e!2sLA%20PERLA%20DI%20SICILIA!5e0!3m2!1sit!2sit!4v1747981620052!5m2!1sit!2sit" width="985" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <h4 class="font-bold text-terracotta mb-2">In Auto</h4>
+                        <p class="text-gray-700 text-sm">Uscita autostrada A19 Caltanissetta, seguire indicazioni per San Cono</p>
                     </div>
-
-                        <!-- Map Controls Overlay -->
-                        <div class="absolute top-4 right-4 z-20 flex flex-col space-y-3">
-                            <button onclick="openInGoogleMaps()"
-                                aria-label="Open location in Google Maps"
-                                class="map-control-btn bg-white bg-opacity-90 backdrop-filter backdrop-blur-sm p-4 rounded-full shadow-lg hover:bg-opacity-100 transition-all duration-300 hover:scale-110">
-                                <i class="fas fa-external-link-alt text-terracotta"></i>
-                            </button>
-                            <button onclick="getDirections()"
-                                aria-label="Get directions to location"
-                                class="map-control-btn bg-white bg-opacity-90 backdrop-filter backdrop-blur-sm p-4 rounded-full shadow-lg hover:bg-opacity-100 transition-all duration-300 hover:scale-110">
-                                <i class="fas fa-route text-gold"></i>
-                            </button>
+                    
+                    <div class="text-center bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg p-6 rounded-xl hover-lift">
+                        <div class="w-16 h-16 bg-gradient-to-br from-gold to-sunset rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-bus text-white text-2xl"></i>
                         </div>
-
-                        <!-- Location Info Card -->
-                        <div
-                            class="absolute bottom-4 left-4 z-20 bg-white bg-opacity-95 backdrop-filter backdrop-blur-sm p-6 rounded-xl shadow-lg max-w-xs">
-                            <div class="flex items-center mb-3">
-                                <div
-                                    class="w-10 h-10 bg-gradient-to-br from-terracotta to-gold rounded-full flex items-center justify-center mr-4">
-                                    <i class="fas fa-map-marker-alt text-white text-base"></i>
-                                </div>
-                                <h5 class="font-bold text-terracotta text-lg">La Perla di Sicilia</h5>
-                            </div>
-                            <p class="text-sm text-gray-700">C.da bubbonia<br> 93013 Mazzarino CL, Sicilia</p>
-                        </div>
+                        <h4 class="font-bold text-terracotta mb-2">Mezzi Pubblici</h4>
+                        <p class="text-gray-700 text-sm">Autobus AST da Catania, fermata San Cono centro</p>
                     </div>
-
-                    <!-- Map Details -->
-                    <div class="mt-6 flex justify-center gap-8 flex-wrap max-w-md mx-auto">
-                        <div
-                            class="text-center p-6 bg-white bg-opacity-60 rounded-xl shadow-md hover:bg-opacity-80 transition-all duration-300 w-40">
-                            <div
-                                class="w-14 h-14 bg-gradient-to-br from-terracotta to-gold rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i class="fas fa-car text-white text-xl"></i>
-                            </div>
-                            <h6 class="font-semibold text-terracotta mb-1 text-lg">In Auto</h6>
-                            <p class="text-sm text-gray-700">Parcheggio gratuito disponibile</p>
+                    
+                    <div class="text-center bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg p-6 rounded-xl hover-lift">
+                        <div class="w-16 h-16 bg-gradient-to-br from-cactus to-olive rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-walking text-white text-2xl"></i>
                         </div>
-                        <div
-                            class="text-center p-6 bg-white bg-opacity-60 rounded-xl shadow-md hover:bg-opacity-80 transition-all duration-300 w-40">
-                            <div
-                                class="w-14 h-14 bg-gradient-to-br from-cactus to-olive rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i class="fas fa-walking text-white text-xl"></i>
-                            </div>
-                            <h6 class="font-semibold text-terracotta mb-1 text-lg">A Piedi</h6>
-                            <p class="text-sm text-gray-700">Centro storico a 10 min.</p>
-                        </div>
+                        <h4 class="font-bold text-terracotta mb-2">A Piedi</h4>
+                        <p class="text-gray-700 text-sm">10 minuti a piedi dal centro di San Cono</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <script>
-        // Mobile Menu Toggle with accessibility improvements
-        const mobileMenuButton = document.getElementById('mobileMenuButton');
-        const mobileMenu = document.getElementById('mobileMenu');
+    <!-- Footer -->
+    <footer class="bg-gradient-to-br from-terracotta via-sicilian to-gold text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <img src="imgs/logo.png" alt="La Perla di Sicilia" class="w-16 h-16 rounded-full shadow-lg object-contain" />
+                        <div>
+                            <h3 class="text-2xl font-bold">La Perla di Sicilia</h3>
+                            <p class="opacity-80">Fichi d'India Biologici</p>
+                        </div>
+                    </div>
+                    <p class="text-white opacity-90 leading-relaxed max-w-md">
+                        Coltiviamo con passione i migliori fichi d'India della Sicilia, 
+                        rispettando la tradizione e l'ambiente per offrirti prodotti di qualità superiore.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Link Utili</h4>
+                    <ul class="space-y-2">
+                        <li><a href="hero.html" class="hover:text-gold transition opacity-80 hover:opacity-100">Home</a></li>
+                        <li><a href="about.html" class="hover:text-gold transition opacity-80 hover:opacity-100">Chi Siamo</a></li>
+                        <li><a href="products.html" class="hover:text-gold transition opacity-80 hover:opacity-100">Prodotti</a></li>
+                        <li><a href="sustainability.html" class="hover:text-gold transition opacity-80 hover:opacity-100">Sostenibilità</a></li>
+                        <li><a href="contact.html" class="hover:text-gold transition opacity-80 hover:opacity-100">Contatti</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Contatti</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-map-marker-alt text-gold"></i>
+                            <span class="opacity-80 text-sm">Contrada Bubbonia | Viale Don Luigi Sturzo, 44 (Sede Legale) |San Cono (CT), Sicilia</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-phone text-gold"></i>
+                            <a href="tel:+393931390195" class="opacity-80 hover:text-gold transition">+39 393 139 0195</a>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-envelope text-gold"></i>
+                            <a href="mailto:info@laperladisicilia.it" class="opacity-80 hover:text-gold transition">impresaagricolaagrobubbonia81@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-gold transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-gold transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-gold transition">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white border-opacity-20 mt-12 pt-8 text-center">
+                <p class="opacity-80">&copy; 2025 La Perla di Sicilia. Tutti i diritti riservati.</p>
+                <p class="opacity-60 text-sm mt-2">Fichi d'India Biologici | Prodotti Tipici Siciliani | San Cono, Catania</p>
+            </div>
+        </div>
+    </footer>
 
+    <script>
+        // Mobile Menu Toggle
         function toggleMobileMenu() {
-            const isOpen = mobileMenu.classList.toggle('open');
-            mobileMenuButton.setAttribute('aria-expanded', isOpen);
-            if (isOpen) {
-                mobileMenuButton.classList.add('open');
-                mobileMenuButton.focus();
-            } else {
-                mobileMenuButton.classList.remove('open');
-            }
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('open');
         }
 
-        mobileMenuButton.addEventListener('click', toggleMobileMenu);
-
-        // Close mobile menu on Escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
-                toggleMobileMenu();
-                mobileMenuButton.focus();
-            }
-        });
-
-        // Cookie Bar
-        const cookieBar = document.getElementById('cookieBar');
-
-        function checkCookies() {
-            // Using a simple variable instead of localStorage since it's not supported in artifacts
-            if (!window.cookiesAccepted) {
-                cookieBar.style.display = 'flex';
+        // Cookie Bar Functions
+        function showCookieBar() {
+            if (!localStorage.getItem('cookiesAccepted')) {
+                document.getElementById('cookieBar').style.display = 'flex';
             }
         }
 
         function acceptCookies() {
-            window.cookiesAccepted = true;
-            cookieBar.style.display = 'none';
+            localStorage.setItem('cookiesAccepted', 'true');
+            document.getElementById('cookieBar').style.display = 'none';
         }
 
-        // Enhanced Form Interactions
-        const formInputs = document.querySelectorAll('.form-input');
-
-        formInputs.forEach(input => {
-            input.addEventListener('focus', function () {
-                this.parentElement.style.transform = 'scale(1.02)';
-                this.parentElement.style.transition = 'all 0.3s ease';
-            });
-
-            input.addEventListener('blur', function () {
-                this.parentElement.style.transform = 'scale(1)';
-            });
-        });
-
-        // Parallax Effect for Background
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const parallax = document.querySelector('.parallax-bg');
-            const speed = scrolled * 0.5;
-
-            if (window.innerWidth > 768) {
-                parallax.style.transform = `translateY(${speed}px)`;
-            }
-        });
-
-        // Smooth Animation on Load
-        window.addEventListener('load', function () {
-            checkCookies();
-
-            // Animate elements on load
-            const animatedElements = document.querySelectorAll('.hover-lift, .contact-info-card');
-            animatedElements.forEach((element, index) => {
-                setTimeout(() => {
-                    element.style.opacity = '0';
-                    element.style.transform = 'translateY(30px)';
-                    element.style.transition = 'all 0.6s ease';
-
-                    setTimeout(() => {
-                        element.style.opacity = '1';
-                        element.style.transform = 'translateY(0)';
-                    }, 100);
-                }, index * 150);
-            });
-        });
-
-        // Add floating animation to contact cards
-        const contactCards = document.querySelectorAll('.contact-info-card');
-        contactCards.forEach((card, index) => {
-            card.style.animationDelay = `${index * 0.5}s`;
-            card.classList.add('animate-float');
-        });
-
-        // Enhanced hover effects for form
-        const submitBtn = document.querySelector('.submit-btn');
-        submitBtn.addEventListener('mouseenter', function () {
-            this.style.transform = 'translateY(-3px) scale(1.05)';
-        });
-
-        submitBtn.addEventListener('mouseleave', function () {
-            this.style.transform = 'translateY(0) scale(1)';
-        });
-
-        // Google Maps Functions
-        function openInGoogleMaps() {
-            const address = "Via dei Fichi d'India, 123, 95100 Catania, Sicily, Italy";
-            const url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
-            window.open(url, '_blank');
-        }
-
+        // Map Functions
         function getDirections() {
-            const address = "Via dei Fichi d'India, 123, 95100 Catania, Sicily, Italy";
-            const url = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`;
-            window.open(url, '_blank');
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    const lat = position.coords.latitude;
+                    const lng = position.coords.longitude;
+                    const destination = "37.283333,14.352891"; // San Cono coordinates
+                    window.open(`https://www.google.com/maps/dir/${lat},${lng}/${destination}`, '_blank');
+                });
+            }
         }
 
-        // Map interaction effects
-        const mapContainer = document.querySelector('.map-container');
-        if (mapContainer) {
-            mapContainer.addEventListener('mouseenter', function () {
-                this.style.transform = 'translateY(-8px) scale(1.01)';
+        // Form Enhancement
+        document.addEventListener('DOMContentLoaded', function() {
+            // Show cookie bar
+            showCookieBar();
+
+            // Mobile menu button
+            document.getElementById('mobileMenuButton').addEventListener('click', toggleMobileMenu);
+
+            // Form validation
+            const form = document.querySelector('form');
+            const inputs = form.querySelectorAll('input, textarea');
+
+            inputs.forEach(input => {
+                input.addEventListener('focus', function() {
+                    this.parentElement.classList.add('focused');
+                });
+
+                input.addEventListener('blur', function() {
+                    if (!this.value) {
+                        this.parentElement.classList.remove('focused');
+                    }
+                });
+
+                input.addEventListener('input', function() {
+                    if (this.value) {
+                        this.style.borderColor = '#D4A017';
+                    } else {
+                        this.style.borderColor = 'rgba(156, 61, 43, 0.3)';
+                    }
+                });
             });
 
-            mapContainer.addEventListener('mouseleave', function () {
-                this.style.transform = 'translateY(0) scale(1)';
+            // Form submission
+            form.addEventListener('submit', function(e) {
+                const submitBtn = form.querySelector('.submit-btn');
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Invio in corso...';
+                submitBtn.disabled = true;
+
+                // Re-enable after 3 seconds (in case of email client issues)
+                setTimeout(() => {
+                    submitBtn.innerHTML = '<i class="fas fa-paper-plane mr-2"></i>Invia Messaggio';
+                    submitBtn.disabled = false;
+                }, 3000);
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Intersection Observer for animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe contact cards
+            document.querySelectorAll('.contact-info-card, .contact-form').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'all 0.6s ease';
+                observer.observe(card);
+            });
+        });
+
+        // Prevent zoom on input focus (iOS)
+        document.addEventListener('touchstart', function() {}, true);
+
+        // Handle form inputs on mobile
+        if (/Mobi|Android/i.test(navigator.userAgent)) {
+            document.querySelectorAll('.form-input').forEach(input => {
+                input.addEventListener('focus', function() {
+                    setTimeout(() => {
+                        window.scrollTo(0, this.offsetTop - 100);
+                    }, 300);
+                });
             });
         }
     </script>
-</script>
 </body>
-
 </html>
