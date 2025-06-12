@@ -319,6 +319,99 @@
                 height: 60px;
             }
         }
+
+        /* Additional mobile styles for smaller devices */
+        @media (max-width: 480px) {
+            body {
+                font-size: 14px;
+            }
+
+            .heading {
+                font-size: 1.5rem;
+            }
+
+            .sicilian-title {
+                font-size: 2rem;
+            }
+
+            .story-section {
+                padding: 2rem 1rem;
+            }
+
+            .story-section .text-center {
+                margin-bottom: 1rem;
+            }
+
+            .story-section p,
+            .story-section .quote-highlight p {
+                font-size: 1rem;
+            }
+
+            .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-4.gap-6 > div {
+                padding: 1rem;
+            }
+
+            .sustainability-card {
+                padding: 1rem;
+            }
+
+            .glass-card {
+                padding: 1rem;
+            }
+
+            .grid.grid-cols-1.md\:grid-cols-2.gap-8 {
+                grid-template-columns: 1fr !important;
+            }
+
+            .container {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            .section-divider {
+                margin: 2rem 0;
+            }
+
+            .section-divider::before {
+                font-size: 1rem;
+                top: -10px;
+            }
+
+            .text-5xl {
+                font-size: 2rem !important;
+            }
+
+            .text-4xl {
+                font-size: 1.5rem !important;
+            }
+
+            .text-xl {
+                font-size: 1rem !important;
+            }
+
+            .py-20 {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+
+            .prickly-pear {
+                width: 50px;
+                height: 50px;
+            }
+
+            .logo-container {
+                padding: 0 1rem;
+            }
+        }
+
+        /* Reduce motion for accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            .sustainability-card:hover {
+                transform: none !important;
+                box-shadow: none !important;
+                animation: none !important;
+            }
+        }
     </style>
 </head>
 <body class="relative hero-bg">

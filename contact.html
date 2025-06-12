@@ -613,6 +613,78 @@
                 transition: none;
             }
         }
+
+        /* Extra small devices */
+        @media (max-width: 480px) {
+            .contact-form {
+                padding: 1.25rem;
+            }
+
+            .form-input {
+                padding: 0.75rem 0.75rem 0.75rem 2.25rem;
+            }
+
+            .form-icon {
+                left: 0.75rem;
+                font-size: 0.9rem;
+            }
+
+            .contact-info-card {
+                padding: 1rem;
+            }
+
+            .text-6xl {
+                font-size: 2rem !important;
+            }
+
+            .text-4xl {
+                font-size: 1.5rem !important;
+            }
+
+            .section-title::after {
+                width: 50px;
+            }
+
+            .map-wrapper {
+                height: 220px;
+            }
+        }
+
+        /* Landscape mobile orientation */
+        @media (max-width: 768px) and (orientation: landscape) {
+            #contact {
+                padding: 4rem 0 3rem;
+            }
+
+            .map-wrapper {
+                height: 200px;
+            }
+        }
+
+        /* High DPI displays */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .form-input,
+            .contact-info-card,
+            .map-container {
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+        }
+
+        /* Reduce motion for accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            .floating-element,
+            .animate-float,
+            .animate-pulse-slow {
+                animation: none;
+            }
+
+            .hover-lift,
+            .contact-info-card,
+            .map-container {
+                transition: none;
+            }
+        }
     </style>
 </head>
 
