@@ -78,7 +78,7 @@
                         url('imgs/perla6.jpg');
             background-size: cover;
             background-position: center;
-            background-attachment: scroll;
+            background-attachment: fixed;
             position: relative;
         }
         
@@ -99,8 +99,6 @@
             backdrop-filter: blur(20px);
             border: 1px solid rgba(156, 61, 43, 0.2);
             box-shadow: 0 25px 50px rgba(156, 61, 43, 0.1);
-            padding: 2rem 1rem;
-            margin: 1rem;
         }
         
         .sustainability-card {
@@ -111,8 +109,6 @@
             position: relative;
             overflow: hidden;
             transition: all 0.4s ease;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
         }
         
         .sustainability-card::before {
@@ -135,7 +131,7 @@
         }
         
         .sustainability-card:hover {
-            transform: translateY(-5px) scale(1.01);
+            transform: translateY(-10px) scale(1.02);
             box-shadow: 0 30px 60px rgba(156, 61, 43, 0.2);
         }
         
@@ -143,16 +139,12 @@
             background: linear-gradient(135deg, #9C3D2B, #E2725B);
             box-shadow: 0 0 30px rgba(156, 61, 43, 0.4);
             animation: glow 3s ease-in-out infinite alternate;
-            margin: 0 auto 1rem auto;
-            padding: 1rem;
         }
         
         .mobile-menu {
             transform: translateX(100%);
             transition: transform 0.3s ease;
             backdrop-filter: blur(10px);
-            padding: 2rem 1rem;
-            padding-top: 5rem;
         }
         
         .mobile-menu.open {
@@ -165,8 +157,8 @@
         }
         
         .prickly-pear {
-            width: 60px;
-            height: 60px;
+            width: 80px;
+            height: 80px;
             position: relative;
             animation: bounce-slow 4s infinite;
         }
@@ -201,9 +193,6 @@
             backdrop-filter: blur(25px);
             position: relative;
             overflow: hidden;
-            padding: 2rem 1rem;
-            margin: 1rem;
-            border-radius: 1rem;
         }
         
         .story-section::before {
@@ -222,16 +211,14 @@
             border-left: 5px solid;
             border-image: linear-gradient(45deg, #9C3D2B, #D4A017) 1;
             position: relative;
-            padding: 1rem;
-            margin: 1rem 0;
         }
         
         .quote-highlight::before {
             content: '"';
             position: absolute;
-            top: -10px;
-            left: 10px;
-            font-size: 2rem;
+            top: -20px;
+            left: 20px;
+            font-size: 4rem;
             color: #D4A017;
             font-family: 'Playfair Display', serif;
             opacity: 0.3;
@@ -261,8 +248,6 @@
             font-weight: 600;
             transition: all 0.4s ease;
             box-shadow: 0 8px 25px rgba(156, 61, 43, 0.3);
-            min-height: 44px;
-            min-width: 44px;
         }
         
         .rustic-btn::before {
@@ -309,7 +294,7 @@
         .section-divider {
             height: 2px;
             background: linear-gradient(90deg, transparent, #D4A017, transparent);
-            margin: 2rem 0;
+            margin: 4rem 0;
             position: relative;
         }
         
@@ -323,332 +308,153 @@
             padding: 0 15px;
             font-size: 1.5rem;
         }
-        
-        /* Mobile optimizations */
+
+        /* Mobile-specific styles */
         @media (max-width: 768px) {
-            .sicilian-title {
-                font-size: 2.5rem;
-            }
-            
-            .prickly-pear {
-                width: 60px;
-                height: 60px;
-            }
-            
-            /* Header optimizations */
-            header {
-                padding: 0.75rem 0;
+            body {
+                font-size: 16px;
             }
             
             header .container {
-                padding: 0 1rem;
+                padding: 0.5rem 1rem;
             }
             
-            header nav {
-                display: none;
+            #mobileMenu {
+                padding: 2rem 1.5rem;
             }
             
-            /* Hero section mobile */
+            #mobileMenu nav a {
+                font-size: 1.8rem;
+                padding: 0.5rem 0;
+            }
+            
+            .sicilian-title {
+                font-size: 2.2rem;
+                margin-bottom: 1rem;
+            }
+            
             .hero-bg {
                 background-attachment: scroll;
             }
             
-            section:first-of-type {
-                padding-top: 6rem;
-                padding-bottom: 3rem;
-            }
-            
-            .sicilian-title {
-                font-size: 2rem;
-                margin-bottom: 1.5rem;
-            }
-            
-            .hero-bg p {
-                font-size: 1.25rem;
-                padding: 0 1rem;
-            }
-            
-            /* Story section mobile */
             .story-section {
-                padding: 2rem 1rem;
-                margin: 1rem;
-                border-radius: 1rem;
-            }
-            
-            .story-section h2 {
-                font-size: 2rem;
-                margin-bottom: 1.5rem;
-            }
-            
-            .story-section .grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .story-section .aspect-square {
-                width: 200px;
-                margin: 0 auto;
+                padding: 1.5rem !important;
             }
             
             .quote-highlight {
                 padding: 1rem;
-                margin: 1rem 0;
-            }
-            
-            .quote-highlight::before {
-                font-size: 2rem;
-                top: -10px;
-                left: 10px;
-            }
-            
-            /* Cycle section mobile */
-            .bg-gradient-to-r {
-                padding: 1.5rem;
-                margin: 1rem 0;
-            }
-            
-            .bg-gradient-to-r h3 {
-                font-size: 1.5rem;
                 margin-bottom: 1rem;
             }
             
-            .bg-gradient-to-r .grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 1rem;
-            }
-            
-            .bg-gradient-to-r .text-center {
-                padding: 1rem;
-            }
-            
-            .bg-gradient-to-r .text-3xl {
-                font-size: 1.5rem;
-                margin-bottom: 0.5rem;
-            }
-            
-            .bg-gradient-to-r h4 {
-                font-size: 0.875rem;
-                margin-bottom: 0.5rem;
-            }
-            
-            .bg-gradient-to-r p {
-                font-size: 0.75rem;
-            }
-            
-            /* Sustainability practices mobile */
             .sustainability-card {
                 padding: 1.5rem;
-                margin-bottom: 1rem;
             }
             
-            .sustainability-card .flex {
+            .sustainability-card .icon-glow {
+                padding: 1rem;
+                margin-right: 1rem;
+            }
+            
+            .sustainability-card .icon-glow i {
+                font-size: 1.8rem;
+            }
+            
+            .glass-card {
+                padding: 1.5rem;
+            }
+            
+            .glass-card.rounded-2xl {
+                padding: 1.5rem;
+            }
+            
+            .glass-card.rounded-3xl {
+                padding: 1.5rem;
+            }
+            
+            .rustic-btn, .border-2 {
+                padding: 0.75rem 1rem;
+                font-size: 1rem;
+            }
+            
+            .grid-cols-4, .grid-cols-2 {
+                grid-template-columns: 1fr;
+            }
+            
+            .aspect-square {
+                width: 100%;
+                margin-bottom: 1.5rem;
+            }
+            
+            section {
+                padding: 2rem 0;
+            }
+            
+            .heading.text-5xl {
+                font-size: 2rem;
+            }
+            
+            .heading.text-4xl {
+                font-size: 1.8rem;
+            }
+            
+            .text-2xl {
+                font-size: 1.3rem;
+            }
+            
+            .section-divider {
+                margin: 2rem 0;
+            }
+
+            .no-scroll {
+                overflow: hidden;
+            }
+            
+            .hover-card {
+                transform: translateY(-5px) scale(1.01);
+                box-shadow: 0 15px 30px rgba(156, 61, 43, 0.15);
+            }
+            
+            a, button {
+                min-width: 44px;
+                min-height: 44px;
+            }
+            
+            img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+            }
+            
+            input, textarea, select {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sicilian-title {
+                font-size: 1.8rem;
+            }
+            
+            .heading.text-5xl {
+                font-size: 1.6rem;
+            }
+            
+            .sustainability-card {
                 flex-direction: column;
                 text-align: center;
             }
             
             .sustainability-card .icon-glow {
                 margin: 0 auto 1rem auto;
-                padding: 1rem;
             }
             
-            .sustainability-card h3 {
-                font-size: 1.25rem;
-                margin-bottom: 1rem;
-            }
-            
-            .sustainability-card p {
-                font-size: 0.9rem;
-                margin-bottom: 1rem;
-            }
-            
-            .sustainability-card:hover {
-                transform: translateY(-5px) scale(1.01);
-            }
-            
-            /* Philosophy section mobile */
-            .glass-card {
-                padding: 2rem 1rem;
-                margin: 1rem;
-            }
-            
-            .glass-card h3 {
-                font-size: 1.75rem;
-                margin-bottom: 1.5rem;
-            }
-            
-            .glass-card blockquote {
-                font-size: 1.125rem;
-            }
-            
-            /* Certification section mobile */
-            .certification-section .grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .certification-section .aspect-square {
-                width: 100%;
-                max-width: 300px;
-                margin: 0 auto;
-            }
-            
-            .certification-section h3 {
-                font-size: 1.75rem;
-                margin-bottom: 1.5rem;
-            }
-            
-            .certification-section .grid-cols-2 {
-                grid-template-columns: 1fr 1fr;
-                gap: 0.75rem;
-            }
-            
-            .certification-section .grid-cols-2 > div {
-                padding: 0.75rem;
-            }
-            
-            .certification-section .text-3xl {
-                font-size: 1.5rem;
-            }
-            
-            /* Impact statistics mobile */
-            .impact-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 1rem;
-            }
-            
-            .impact-card {
-                padding: 1.5rem 1rem;
-            }
-            
-            .impact-card .text-5xl {
-                font-size: 2rem;
-                margin-bottom: 0.75rem;
-            }
-            
-            .impact-card .text-4xl {
-                font-size: 2rem;
-                margin-bottom: 0.5rem;
-            }
-            
-            .impact-card p {
-                font-size: 0.875rem;
-            }
-            
-            /* Call to action mobile */
-            .cta-section .flex {
+            .flex-col.sm\:flex-row {
                 flex-direction: column;
-                gap: 1rem;
             }
             
-            .cta-section h2 {
-                font-size: 1.75rem;
-                margin-bottom: 1rem;
-            }
-            
-            .cta-section p {
-                font-size: 1rem;
-                margin-bottom: 1.5rem;
-            }
-            
-            .cta-section .rustic-btn,
-            .cta-section .border-2 {
-                padding: 0.75rem 1.5rem;
-                font-size: 1rem;
+            .rustic-btn, .border-2 {
                 width: 100%;
-                text-align: center;
-            }
-            
-            /* General mobile spacing */
-            section {
-                padding: 3rem 0;
-            }
-            
-            .container {
-                padding-left: 1rem;
-                padding-right: 1rem;
-            }
-            
-            .section-divider {
-                margin: 2rem 0;
-            }
-            
-            .text-5xl {
-                font-size: 2rem;
-            }
-            
-            .text-4xl {
-                font-size: 1.75rem;
-            }
-            
-            .text-3xl {
-                font-size: 1.5rem;
-            }
-            
-            .text-2xl {
-                font-size: 1.25rem;
-            }
-            
-            .text-xl {
-                font-size: 1.125rem;
-            }
-            
-            /* Mobile menu improvements */
-            #mobileMenuButton {
-                top: 1rem;
-                right: 1rem;
-                padding: 0.75rem;
-            }
-            
-            .mobile-menu {
-                padding: 2rem 1rem;
-                padding-top: 5rem;
-            }
-            
-            .mobile-menu nav {
-                space-y: 1.5rem;
-            }
-            
-            .mobile-menu a {
-                font-size: 1.5rem;
-                padding: 0.5rem 0;
-                display: block;
-            }
-            
-            .mobile-menu .mt-12 {
-                margin-top: 2rem;
-            }
-            
-            /* Touch-friendly buttons */
-            button, .rustic-btn, .border-2 {
-                min-height: 44px;
-                min-width: 44px;
-            }
-        }
-        
-        /* Small mobile devices */
-        @media (max-width: 480px) {
-            .sicilian-title {
-                font-size: 1.75rem;
-            }
-            
-            .story-section {
-                padding: 1.5rem 0.75rem;
-            }
-            
-            .sustainability-card {
-                padding: 1rem;
-            }
-            
-            .glass-card {
-                padding: 1.5rem 0.75rem;
-            }
-            
-            .impact-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .bg-gradient-to-r .grid {
-                grid-template-columns: 1fr;
+                margin-bottom: 0.5rem;
             }
         }
     </style>
@@ -762,162 +568,109 @@
                         </div>
                         <div class="text-center bg-white rounded-xl p-4 shadow-lg">
                             <div class="text-3xl mb-3">🌸</div>
-                            <h4 class="font-bold text-terracotta mb-2">Giugno-Agosto</h4>
-                            <p class="text-sm text-gray-600">Fioritura e impollinazione</p>
-                        </div>
-                        <div class="text-center bg-white rounded-xl p-4 shadow-lg">
-                            <div class="text-3xl mb-3">🍇</div>
-                            <h4 class="font-bold text-terracotta mb-2">Settembre-Ottobre</h4>
-                            <p class="text-sm text-gray-600">Raccolta dei frutti</p>
+                            <h4 class="font-bold text-terracotta mb-2">Maggio</h4>
+                            <p class="text-sm text-gray-600">Scozzolatura</p>
                         </div>
                         <div class="text-center bg-white rounded-xl p-4 shadow-lg">
                             <div class="text-3xl mb-3">🌿</div>
-                            <h4 class="font-bold text-terracotta mb-2">Novembre-Febbraio</h4>
-                            <p class="text-sm text-gray-600">Preparazione del terreno</p>
+                            <h4 class="font-bold text-terracotta mb-2">Giugno-Luglio</h4>
+                            <p class="text-sm text-gray-600">Diradamento</p>
+                        </div>
+                        <div class="text-center bg-white rounded-xl p-4 shadow-lg">
+                            <div class="text-3xl mb-3">🥭</div>
+                            <h4 class="font-bold text-terracotta mb-2">Agosto-Dicembre</h4>
+                            <p class="text-sm text-gray-600">Raccolta</p>
                         </div>
                     </div>
+                </div>
+
+                <div class="text-center">
+                    <p class="text-lg text-gray-700 body-text leading-relaxed">
+                        La nostra azienda si trova in una zona ricca di storia e cultura, circondata da siti archeologici che testimoniano millenni di tradizione agricola siciliana.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Sustainability Practices -->
-    <section class="py-20 bg-gradient-to-br from-parchment/50 to-pearl/50 relative">
+    <section class="py-20 relative">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="heading text-5xl text-terracotta mb-8">Le Nostre Pratiche Sostenibili</h2>
-                <div class="section-divider"></div>
-                <p class="text-xl text-gray-700 max-w-3xl mx-auto body-text">
-                    Ogni scelta che facciamo è guidata dal rispetto per la terra che ci nutre e dalle generazioni future che la erediteranno.
+                <h2 class="heading text-5xl text-terracotta mb-6">Le Nostre Pratiche Sostenibili</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Ogni gesto è pensato per preservare l'ambiente e garantire un futuro migliore
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                <!-- Water Conservation -->
-                <div class="sustainability-card rounded-2xl p-8 shadow-xl">
-                    <div class="flex flex-col items-center text-center">
-                        <div class="icon-glow rounded-full p-6 mb-6">
-                            <i class="fas fa-tint text-3xl text-white"></i>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <div class="sustainability-card rounded-2xl p-8 hover-card">
+                    <div class="flex items-start md:flex-row flex-col">
+                        <div class="icon-glow p-6 rounded-2xl mr-6 text-white flex-shrink-0 mb-4 md:mb-0 mx-auto md:mx-0">
+                            <i class="fas fa-tint text-4xl"></i>
                         </div>
-                        <h3 class="heading text-2xl text-terracotta mb-4">Conservazione Idrica</h3>
-                        <p class="text-gray-700 mb-4 body-text">
-                            Utilizziamo sistemi di irrigazione a goccia per minimizzare lo spreco d'acqua e raccogliamo l'acqua piovana per l'irrigazione.
-                        </p>
-                        <div class="bg-mediterranean/10 rounded-lg p-4 w-full">
-                            <div class="flex items-center justify-between">
-                                <span class="text-sm font-semibold text-mediterranean">Risparmio Idrico</span>
-                                <span class="text-2xl font-bold text-mediterranean">70%</span>
+                        <div class="text-center md:text-left">
+                            <h3 class="heading text-2xl text-terracotta mb-4">Irrigazione Intelligente</h3>
+                            <p class="text-gray-700 body-text leading-relaxed mb-4">
+                                Il nostro sistema di irrigazione a goccia riduce del 60% il consumo d'acqua, utilizzando sensori di umidità per ottimizzare ogni goccia.
+                            </p>
+                            <div class="flex items-center text-gold justify-center md:justify-start">
+                                <i class="fas fa-chart-line mr-2"></i>
+                                <span class="font-semibold">-60% consumo idrico</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Organic Certification -->
-                <div class="sustainability-card rounded-2xl p-8 shadow-xl">
-                    <div class="flex flex-col items-center text-center">
-                        <div class="icon-glow rounded-full p-6 mb-6">
-                            <i class="fas fa-leaf text-3xl text-white"></i>
+                <div class="sustainability-card rounded-2xl p-8 hover-card">
+                    <div class="flex items-start md:flex-row flex-col">
+                        <div class="icon-glow p-6 rounded-2xl mr-6 text-white flex-shrink-0 mb-4 md:mb-0 mx-auto md:mx-0">
+                            <i class="fas fa-bug text-4xl"></i>
                         </div>
-                        <h3 class="heading text-2xl text-terracotta mb-4">Certificazione Biologica</h3>
-                        <p class="text-gray-700 mb-4 body-text">
-                            Dal 2010 siamo certificati biologici, utilizzando solo concimi naturali e pratiche agricole sostenibili.
-                        </p>
-                        <div class="bg-cactus/10 rounded-lg p-4 w-full">
-                            <div class="flex items-center justify-center">
-                                <div class="certification-badge text-center">
-                                    <div>
-                                        <i class="fas fa-certificate mb-2"></i>
-                                        <div class="text-sm">BIO</div>
-                                    </div>
-                                </div>
+                        <div class="text-center md:text-left">
+                            <h3 class="heading text-2xl text-terracotta mb-4">Lotta Biologica Avanzata</h3>
+                            <p class="text-gray-700 body-text leading-relaxed mb-4">
+                                Utilizziamo insetti benefici e preparati naturali, creando un ecosistema equilibrato che si autodifende naturalmente.
+                            </p>
+                            <div class="flex items-center text-gold justify-center md:justify-start">
+                                <i class="fas fa-shield-alt mr-2"></i>
+                                <span class="font-semibold">100% naturale</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Biodiversity -->
-                <div class="sustainability-card rounded-2xl p-8 shadow-xl">
-                    <div class="flex flex-col items-center text-center">
-                        <div class="icon-glow rounded-full p-6 mb-6">
-                            <i class="fas fa-seedling text-3xl text-white"></i>
+                <div class="sustainability-card rounded-2xl p-8 hover-card">
+                    <div class="flex items-start md:flex-row flex-col">
+                        <div class="icon-glow p-6 rounded-2xl mr-6 text-white flex-shrink-0 mb-4 md:mb-0 mx-auto md:mx-0">
+                            <i class="fas fa-solar-panel text-4xl"></i>
                         </div>
-                        <h3 class="heading text-2xl text-terracotta mb-4">Biodiversità</h3>
-                        <p class="text-gray-700 mb-4 body-text">
-                            Preserviamo e miglioriamo la biodiversità del territorio, creando habitat naturali per flora e fauna locale.
-                        </p>
-                        <div class="bg-olive/10 rounded-lg p-4 w-full">
-                            <div class="grid grid-cols-2 gap-4 text-center">
-                                <div>
-                                    <div class="text-2xl font-bold text-olive">15+</div>
-                                    <div class="text-xs text-olive">Specie Native</div>
-                                </div>
-                                <div>
-                                    <div class="text-2xl font-bold text-olive">8</div>
-                                    <div class="text-xs text-olive">Habitat Diversi</div>
-                                </div>
+                        <div class="text-center md:text-left">
+                            <h3 class="heading text-2xl text-terracotta mb-4">Energia Rinnovabile</h3>
+                            <p class="text-gray-700 body-text leading-relaxed mb-4">
+                                I nostri impianti fotovoltaici di ultima generazione coprono il 100% del fabbisogno energetico, con accumulo per la notte.
+                            </p>
+                            <div class="flex items-center text-gold justify-center md:justify-start">
+                                <i class="fas fa-sun mr-2"></i>
+                                <span class="font-semibold">100% energia pulita</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Renewable Energy -->
-                <div class="sustainability-card rounded-2xl p-8 shadow-xl">
-                    <div class="flex flex-col items-center text-center">
-                        <div class="icon-glow rounded-full p-6 mb-6">
-                            <i class="fas fa-solar-panel text-3xl text-white"></i>
+                <div class="sustainability-card rounded-2xl p-8 hover-card">
+                    <div class="flex items-start md:flex-row flex-col">
+                        <div class="icon-glow p-6 rounded-2xl mr-6 text-white flex-shrink-0 mb-4 md:mb-0 mx-auto md:mx-0">
+                            <i class="fas fa-recycle text-4xl"></i>
                         </div>
-                        <h3 class="heading text-2xl text-terracotta mb-4">Energia Rinnovabile</h3>
-                        <p class="text-gray-700 mb-4 body-text">
-                            I nostri impianti sono alimentati da energia solare, riducendo l'impatto ambientale delle nostre operazioni.
-                        </p>
-                        <div class="bg-gold/10 rounded-lg p-4 w-full">
-                            <div class="flex items-center justify-between">
-                                <span class="text-sm font-semibold text-sicilian">Energia Pulita</span>
-                                <span class="text-2xl font-bold text-sicilian">100%</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Waste Reduction -->
-                <div class="sustainability-card rounded-2xl p-8 shadow-xl">
-                    <div class="flex flex-col items-center text-center">
-                        <div class="icon-glow rounded-full p-6 mb-6">
-                            <i class="fas fa-recycle text-3xl text-white"></i>
-                        </div>
-                        <h3 class="heading text-2xl text-terracotta mb-4">Riduzione Rifiuti</h3>
-                        <p class="text-gray-700 mb-4 body-text">
-                            Implementiamo strategie di economia circolare, riutilizzando ogni sottoprodotto della nostra coltivazione.
-                        </p>
-                        <div class="bg-sunset/10 rounded-lg p-4 w-full">
-                            <div class="flex items-center justify-between">
-                                <span class="text-sm font-semibold text-sunset">Rifiuti Ridotti</span>
-                                <span class="text-2xl font-bold text-sunset">95%</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Community Support -->
-                <div class="sustainability-card rounded-2xl p-8 shadow-xl">
-                    <div class="flex flex-col items-center text-center">
-                        <div class="icon-glow rounded-full p-6 mb-6">
-                            <i class="fas fa-hands-helping text-3xl text-white"></i>
-                        </div>
-                        <h3 class="heading text-2xl text-terracotta mb-4">Supporto alla Comunità</h3>
-                        <p class="text-gray-700 mb-4 body-text">
-                            Collaboriamo con produttori locali e sosteniamo l'economia del territorio siciliano.
-                        </p>
-                        <div class="bg-terracotta/10 rounded-lg p-4 w-full">
-                            <div class="grid grid-cols-2 gap-4 text-center">
-                                <div>
-                                    <div class="text-2xl font-bold text-terracotta">25+</div>
-                                    <div class="text-xs text-terracotta">Partner Locali</div>
-                                </div>
-                                <div>
-                                    <div class="text-2xl font-bold text-terracotta">12</div>
-                                    <div class="text-xs text-terracotta">Famiglie Coinvolte</div>
-                                </div>
+                        <div class="text-center md:text-left">
+                            <h3 class="heading text-2xl text-terracotta mb-4">Economia Circolare</h3>
+                            <p class="text-gray-700 body-text leading-relaxed mb-4">
+                                Ogni scarto diventa risorsa: compostaggio avanzato, biogas dai residui, e packaging biodegradabile al 100%.
+                            </p>
+                            <div class="flex items-center text-gold justify-center md:justify-start">
+                                <i class="fas fa-infinity mr-2"></i>
+                                <span class="font-semibold">Zero sprechi</span>
                             </div>
                         </div>
                     </div>
@@ -929,66 +682,61 @@
     <!-- Philosophy Section -->
     <section class="py-20 relative">
         <div class="container mx-auto px-6">
-            <div class="glass-card rounded-3xl shadow-2xl p-12 max-w-4xl mx-auto text-center">
-                <h3 class="heading text-4xl text-terracotta mb-8">La Nostra Filosofia</h3>
-                <blockquote class="text-2xl text-gray-700 italic body-text leading-relaxed mb-8">
-                    "Non ereditiamo la terra dai nostri antenati, la prendiamo in prestito dai nostri figli. 
-                    Ogni decisione che prendiamo deve onorare questo prestito sacro."
-                </blockquote>
-                <div class="flex justify-center items-center space-x-4">
-                    <div class="w-16 h-16 bg-gradient-to-br from-terracotta to-sunset rounded-full flex items-center justify-center">
-                        <i class="fas fa-heart text-white text-2xl"></i>
-                    </div>
-                    <div class="text-left">
-                        <p class="text-lg font-semibold text-terracotta">Famiglia Spitale</p>
-                        <p class="text-sm text-gray-600">Custodi della tradizione dal 1969</p>
+            <div class="glass-card rounded-3xl p-12 max-w-4xl mx-auto text-center relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-br from-terracotta/5 to-gold/10 rounded-3xl"></div>
+                <div class="relative z-10">
+                    <h3 class="heading text-4xl text-terracotta mb-8">La Filosofia di La Perla Di Sicilia</h3>
+                    <div class="w-20 h-1 bg-gradient-to-r from-terracotta to-gold mx-auto mb-8"></div>
+                    <blockquote class="text-2xl italic body-text text-gray-700 leading-relaxed">
+                        "Coltiviamo con amore e rispetto, perché la terra è il nostro lascito più prezioso e la sostenibilità il nostro cammino verso il futuro."
+                    </blockquote>
+                    <div class="flex justify-center mt-8">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-terracotta to-gold flex items-center justify-center">
+                            <i class="fas fa-heart text-white text-2xl"></i>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Certification and Impact -->
-    <section class="py-20 bg-gradient-to-br from-cactus/5 to-olive/5 certification-section">
+    <!-- Certification Section -->
+    <section class="py-20 relative">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="heading text-5xl text-terracotta mb-8">Certificazioni e Impatto</h2>
-                <div class="section-divider"></div>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
-                <div class="text-center">
-                    <div class="relative aspect-square max-w-sm mx-auto mb-8">
-                        <img src="imgs/perla2.jpg" alt="Certificazioni sostenibilità" class="w-full h-full object-cover rounded-3xl shadow-2xl" />
-                        <div class="absolute -top-4 -right-4 bg-gradient-to-br from-cactus to-olive text-white p-4 rounded-2xl shadow-lg">
-                            <i class="fas fa-award text-3xl mb-2"></i>
-                            <div class="text-sm font-bold">ECO+</div>
+            <div class="glass-card rounded-3xl shadow-2xl p-12 max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="relative">
+                        <div class="aspect-square rounded-2xl overflow-hidden shadow-2xl">
+                            <img src="imgs/perla1.jpg" alt="Certificazione biologica La Perla di Sicilia" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700 rounded-xl" />
+                        </div>
+                        <div class="absolute -top-4 -right-4 bg-gradient-to-br from-cactus to-olive text-white p-4 rounded-full shadow-xl">
+                            <i class="fas fa-certificate text-3xl"></i>
                         </div>
                     </div>
-                </div>
-
-                <div class="space-y-8">
-                    <h3 class="heading text-3xl text-terracotta mb-6">I Nostri Riconoscimenti</h3>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="bg-white rounded-xl p-4 shadow-lg text-center">
-                            <i class="fas fa-certificate text-3xl text-cactus mb-2"></i>
-                            <h4 class="font-semibold text-terracotta mb-1">Biologico UE</h4>
-                            <p class="text-xs text-gray-600">Certificato dal 2010</p>
-                        </div>
-                        <div class="bg-white rounded-xl p-4 shadow-lg text-center">
-                            <i class="fas fa-leaf text-3xl text-olive mb-2"></i>
-                            <h4 class="font-semibold text-terracotta mb-1">Carbon Neutral</h4>
-                            <p class="text-xs text-gray-600">Impatto zero</p>
-                        </div>
-                        <div class="bg-white rounded-xl p-4 shadow-lg text-center">
-                            <i class="fas fa-water text-3xl text-mediterranean mb-2"></i>
-                            <h4 class="font-semibold text-terracotta mb-1">Water Steward</h4>
-                            <p class="text-xs text-gray-600">Gestione responsabile</p>
-                        </div>
-                        <div class="bg-white rounded-xl p-4 shadow-lg text-center">
-                            <i class="fas fa-globe text-3xl text-gold mb-2"></i>
-                            <h4 class="font-semibold text-terracotta mb-1">Fair Trade</h4>
-                            <p class="text-xs text-gray-600">Commercio equo</p>
+                    <div>
+                        <h3 class="heading text-4xl text-terracotta mb-6">Certificazione Biologica Premium</h3>
+                        <p class="text-lg text-gray-700 mb-8 body-text leading-relaxed">
+                            La Perla Di Sicilia è orgogliosamente certificata biologica dal 2010, seguendo protocolli rigorosi che garantiscono 
+                            l'eccellenza e la purezza dei nostri prodotti siciliani.
+                        </p>
+                        
+                        <div class="grid grid-cols-2 gap-4 mb-8">
+                            <div class="bg-gradient-to-br from-cactus/10 to-olive/10 p-4 rounded-xl text-center">
+                                <div class="text-3xl mb-2">🚫</div>
+                                <p class="font-semibold text-terracotta">Zero Pesticidi</p>
+                            </div>
+                            <div class="bg-gradient-to-br from-cactus/10 to-olive/10 p-4 rounded-xl text-center">
+                                <div class="text-3xl mb-2">🧬</div>
+                                <p class="font-semibold text-terracotta">No OGM</p>
+                            </div>
+                            <div class="bg-gradient-to-br from-cactus/10 to-olive/10 p-4 rounded-xl text-center">
+                                <div class="text-3xl mb-2">🌍</div>
+                                <p class="font-semibold text-terracotta">100% Sostenibile</p>
+                            </div>
+                            <div class="bg-gradient-to-br from-cactus/10 to-olive/10 p-4 rounded-xl text-center">
+                                <div class="text-3xl mb-2">✅</div>
+                                <p class="font-semibold text-terracotta">Tracciabile</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -999,117 +747,189 @@
     <!-- Impact Statistics -->
     <section class="py-20 relative">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="heading text-5xl text-terracotta mb-8">Il Nostro Impatto</h2>
-                <div class="section-divider"></div>
-                <p class="text-xl text-gray-700 max-w-3xl mx-auto body-text">
-                    Numeri che raccontano il nostro impegno quotidiano per un futuro più sostenibile.
+            <div class="text-center mb-12">
+                <h2 class="heading text-5xl text-terracotta mb-6">Il Nostro Impatto Ambientale</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Numeri che raccontano il nostro impegno concreto per la sostenibilità
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto impact-grid">
-                <div class="glass-card rounded-2xl p-8 text-center shadow-xl impact-card">
-                    <div class="text-5xl font-bold text-mediterranean mb-4">2.5k</div>
-                    <h4 class="text-xl font-semibold text-terracotta mb-2">Tonnellate CO2</h4>
-                    <p class="text-gray-600">Assorbite annualmente</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="glass-card rounded-2xl p-8 text-center hover-card">
+                    <div class="icon-glow w-20 h-20 rounded-full mx-auto mb-6 flex items-center justify-center">
+                        <i class="fas fa-water text-3xl text-white"></i>
+                    </div>
+                    <div class="text-4xl font-bold text-terracotta mb-2">50K</div>
+                    <div class="text-lg text-gray-600 mb-2">Litri d'acqua</div>
+                    <div class="text-sm text-gold">risparmiati ogni anno</div>
                 </div>
-                <div class="glass-card rounded-2xl p-8 text-center shadow-xl impact-card">
-                    <div class="text-5xl font-bold text-cactus mb-4">40%</div>
-                    <h4 class="text-xl font-semibold text-terracotta mb-2">Biodiversità</h4>
-                    <p class="text-gray-600">Incremento negli ultimi 5 anni</p>
+
+                <div class="glass-card rounded-2xl p-8 text-center hover-card">
+                    <div class="icon-glow w-20 h-20 rounded-full mx-auto mb-6 flex items-center justify-center">
+                        <i class="fas fa-leaf text-3xl text-white"></i>
+                    </div>
+                    <div class="text-4xl font-bold text-terracotta mb-2">12T</div>
+                    <div class="text-lg text-gray-600 mb-2">CO₂</div>
+                    <div class="text-sm text-gold">assorbita ogni anno</div>
                 </div>
-                <div class="glass-card rounded-2xl p-8 text-center shadow-xl impact-card">
-                    <div class="text-4xl font-bold text-sunset mb-4">100k</div>
-                    <h4 class="text-xl font-semibold text-terracotta mb-2">Litri d'Acqua</h4>
-                    <p class="text-gray-600">Risparmiati ogni mese</p>
+
+                <div class="glass-card rounded-2xl p-8 text-center hover-card">
+                    <div class="icon-glow w-20 h-20 rounded-full mx-auto mb-6 flex items-center justify-center">
+                        <i class="fas fa-seedling text-3xl text-white"></i>
+                    </div>
+                    <div class="text-4xl font-bold text-terracotta mb-2">85%</div>
+                    <div class="text-lg text-gray-600 mb-2">Biodiversità</div>
+                    <div class="text-sm text-gold">incrementata nel terreno</div>
                 </div>
-                <div class="glass-card rounded-2xl p-8 text-center shadow-xl impact-card">
-                    <div class="text-5xl font-bold text-gold mb-4">15</div>
-                    <h4 class="text-xl font-semibold text-terracotta mb-2">Anni</h4>
-                    <p class="text-gray-600">Di impegno sostenibile</p>
+
+                <div class="glass-card rounded-2xl p-8 text-center hover-card">
+                    <div class="icon-glow w-20 h-20 rounded-full mx-auto mb-6 flex items-center justify-center">
+                        <i class="fas fa-bolt text-3xl text-white"></i>
+                    </div>
+                    <div class="text-4xl font-bold text-terracotta mb-2">100%</div>
+                    <div class="text-lg text-gray-600 mb-2">Energia</div>
+                    <div class="text-sm text-gold">da fonti rinnovabili</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Vision -->
+    <section class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <div class="story-section rounded-3xl shadow-2xl p-12 max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="heading text-5xl text-terracotta mb-8">La Nostra Visione per il Futuro</h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div class="glass-card rounded-2xl p-8 text-center hover-card">
+                        <div class="text-6xl mb-6">🌱</div>
+                        <h3 class="heading text-2xl text-terracotta mb-4">Progetti 2025</h3>
+                        <ul class="text-gray-700 space-y-2 text-left">
+                            <li>• Ampliamento della coltivazione biologica</li>
+                            <li>• Nuovi sistemi di raccolta dell'acqua piovana</li>
+                            <li>• Laboratorio di ricerca sulla biodiversità</li>
+                            <li>• Centro educativo sulla sostenibilità</li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card rounded-2xl p-8 text-center hover-card">
+                        <div class="text-6xl mb-6">🔬</div>
+                        <h3 class="heading text-2xl text-terracotta mb-4">Innovazione</h3>
+                        <ul class="text-gray-700 space-y-2 text-left">
+                            <li>• Sensori IoT per monitoraggio terreno</li>
+                            <li>• AI per ottimizzazione delle colture</li>
+                            <li>• Droni per mappatura precision farming</li>
+                            <li>• App per trasparenza al consumatore</li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card rounded-2xl p-8 text-center hover-card">
+                        <div class="text-6xl mb-6">🤝</div>
+                        <h3 class="heading text-2xl text-terracotta mb-4">Comunità</h3>
+                        <ul class="text-gray-700 space-y-2 text-left">
+                            <li>• Partnership con scuole locali</li>
+                            <li>• Workshop sulla coltivazione biologica</li>
+                            <li>• Supporto ad altri agricoltori biologici</li>
+                            <li>• Turismo agricolo sostenibile</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-12 text-center">
+                    <div class="quote-highlight p-8 rounded-xl">
+                        <p class="text-2xl text-gray-700 body-text leading-relaxed italic">
+                            "Il nostro obiettivo è diventare un modello di eccellenza per l'agricoltura sostenibile mediterranea, 
+                            dimostrando che tradizione e innovazione possono coesistere in armonia."
+                        </p>
+                        <p class="text-lg text-terracotta mt-4 font-semibold">- Famiglia Spitale</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Call to Action -->
-    <section class="py-20 bg-gradient-to-br from-terracotta/10 to-sunset/20 cta-section">
+    <section class="py-20 relative">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="heading text-4xl text-terracotta mb-6">Unisciti al Nostro Viaggio Sostenibile</h2>
-            <p class="text-xl text-gray-700 max-w-3xl mx-auto mb-12 body-text">
-                Scegli La Perla Di Sicilia e diventa parte di una storia di rispetto per la natura e amore per la tradizione siciliana.
-            </p>
-            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
-                <a href="products.html" class="rustic-btn px-8 py-4 rounded-full text-lg font-semibold transition duration-300">
-                    Scopri i Nostri Prodotti
-                </a>
-                <a href="contact.html" class="border-2 border-terracotta text-terracotta px-8 py-4 rounded-full text-lg font-semibold hover:bg-terracotta hover:text-white transition duration-300">
-                    Contattaci
-                </a>
+            <div class="glass-card rounded-3xl p-12 max-w-4xl mx-auto">
+                <h2 class="heading text-4xl text-terracotta mb-6">Unisciti al Nostro Viaggio</h2>
+                <p class="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
+                    Scopri i nostri prodotti biologici e diventa parte della nostra missione per un futuro più sostenibile
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="products.html" class="rustic-btn px-8 py-4 rounded-full text-lg font-semibold transition duration-300">
+                        <i class="fas fa-shopping-cart mr-2"></i>
+                        Scopri i Prodotti
+                    </a>
+                    <a href="contact.html" class="border-2 border-terracotta text-terracotta px-8 py-4 rounded-full text-lg font-semibold hover:bg-terracotta hover:text-white transition duration-300">
+                        <i class="fas fa-envelope mr-2"></i>
+                        Contattaci
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gradient-to-br from-terracotta to-sicilian text-white py-16">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="space-y-4">
-                    <div class="flex items-center space-x-3">
-                        <img src="imgs/logo.png" alt="La Perla di Sicilia Logo" class="w-12 h-12 rounded-full" />
+    <footer class="glass-card mt-20 relative">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-4 mb-6">
+                        <img src="imgs/logo.png" alt="La Perla di Sicilia Logo" class="w-12 h-12 rounded-full object-contain" />
                         <div>
-                            <h3 class="heading text-xl">La Perla</h3>
+                            <h3 class="heading text-xl text-terracotta">La Perla</h3>
                             <p class="handwritten text-gold">Di Sicilia</p>
                         </div>
                     </div>
-                    <p class="text-sm opacity-90">
-                        Coltivazione biologica di fichi d'India siciliani dal 1969. 
-                        Tradizione, qualità e sostenibilità nel cuore della Sicilia.
+                    <p class="text-gray-600 mb-4">
+                        Coltivazione biologica di fichi d'India siciliani dal 1983, con passione per la sostenibilità e l'eccellenza.
                     </p>
-                </div>
-                
-                <div class="space-y-4">
-                    <h4 class="heading text-lg font-semibold">Navigazione</h4>
-                    <div class="space-y-2">
-                        <a href="hero.html" class="block hover:text-gold transition">Home</a>
-                        <a href="about.html" class="block hover:text-gold transition">Chi Siamo</a>
-                        <a href="products.html" class="block hover:text-gold transition">Prodotti</a>
-                        <a href="sustainability.html" class="block hover:text-gold transition">Sostenibilità</a>
-                    </div>
-                </div>
-                
-                <div class="space-y-4">
-                    <h4 class="heading text-lg font-semibold">Contatti</h4>
-                    <div class="space-y-2 text-sm">
-                        <p><i class="fas fa-map-marker-alt mr-2"></i>Santa Margherita di Belice, Sicilia</p>
-                        <p><i class="fas fa-phone mr-2"></i>+39 123 456 7890</p>
-                        <p><i class="fas fa-envelope mr-2"></i>info@perlasicilia.it</p>
-                    </div>
-                </div>
-                
-                <div class="space-y-4">
-                    <h4 class="heading text-lg font-semibold">Seguici</h4>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-2xl hover:text-gold transition"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-2xl hover:text-gold transition"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-2xl hover:text-gold transition"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#" class="text-2xl hover:text-gold transition"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="text-terracotta hover:text-gold transition"><i class="fab fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-terracotta hover:text-gold transition"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-terracotta hover:text-gold transition"><i class="fab fa-whatsapp text-xl"></i></a>
                     </div>
-                    <div class="pt-4">
-                        <p class="text-xs opacity-75">Certificazione Biologica UE</p>
-                        <div class="flex items-center space-x-2 mt-2">
-                            <i class="fas fa-leaf text-gold"></i>
-                            <span class="text-sm">BIO IT 2010</span>
+                </div>
+                
+                <div>
+                    <h4 class="heading text-lg text-terracotta mb-4">Link Utili</h4>
+                    <ul class="space-y-2">
+                        <li><a href="hero.html" class="text-gray-600 hover:text-terracotta transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-600 hover:text-terracotta transition">Chi Siamo</a></li>
+                        <li><a href="products.html" class="text-gray-600 hover:text-terracotta transition">Prodotti</a></li>
+                        <li><a href="sustainability.html" class="text-gray-600 hover:text-terracotta transition">Sostenibilità</a></li>
+                        <li><a href="contact.html" class="text-gray-600 hover:text-terracotta transition">Contatti</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="heading text-lg text-terracotta mb-4">Contatti</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-map-marker-alt text-terracotta"></i>
+                            <span class="text-gray-600">Via Ficuzza, Sicilia</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-phone text-terracotta"></i>
+                            <span class="text-gray-600">+39 123 456 7890</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-envelope text-terracotta"></i>
+                            <span class="text-gray-600">info@laperladi sicilia.it</span>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div class="border-t border-white/20 mt-12 pt-8 text-center">
-                <p class="text-sm opacity-75">
+            <div class="border-t border-gray-300 mt-8 pt-8 text-center">
+                <p class="text-gray-600">
                     © 2024 La Perla Di Sicilia. Tutti i diritti riservati. | 
-                    <a href="#" class="hover:text-gold transition">Privacy Policy</a> | 
-                    <a href="#" class="hover:text-gold transition">Cookie Policy</a>
+                    <a href="#" class="text-terracotta hover:text-gold transition">Privacy Policy</a> | 
+                    <a href="#" class="text-terracotta hover:text-gold transition">Cookie Policy</a>
                 </p>
             </div>
         </div>
@@ -1119,87 +939,117 @@
         // Mobile menu functionality
         function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
+            const body = document.body;
             menu.classList.toggle('open');
+            body.classList.toggle('no-scroll');
         }
+
+        document.getElementById('mobileMenuButton').addEventListener('click', toggleMobileMenu);
 
         // Cookie functionality
-        function acceptCookies() {
-            document.getElementById('cookieBar').style.display = 'none';
-            localStorage.setItem('cookiesAccepted', 'true');
+        function showCookieBar() {
+            if (!localStorage.getItem('cookiesAccepted')) {
+                document.getElementById('cookieBar').style.display = 'flex';
+            }
         }
 
-        // Show cookie bar if not accepted
-        if (!localStorage.getItem('cookiesAccepted')) {
-            document.getElementById('cookieBar').style.display = 'flex';
+        function acceptCookies() {
+            localStorage.setItem('cookiesAccepted', 'true');
+            document.getElementById('cookieBar').style.display = 'none';
         }
 
         // Parallax effect
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
-            const parallax = document.querySelector('.hero-bg');
-            const speed = scrolled * 0.5;
-            parallax.style.transform = `translateY(${speed}px)`;
-        });
-
-        // Animate statistics on scroll
-        const observerOptions = {
-            threshold: 0.5,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
+            const parallaxElements = document.querySelectorAll('.parallax-bg');
+            const speed = 0.5;
+            
+            parallaxElements.forEach(element => {
+                const yPos = -(scrolled * speed);
+                element.style.transform = `translateY(${yPos}px)`;
             });
-        }, observerOptions);
-
-        // Observe impact cards
-        document.querySelectorAll('.impact-card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(50px)';
-            card.style.transition = 'all 0.8s ease';
-            observer.observe(card);
         });
-
-        // Observe sustainability cards
-        document.querySelectorAll('.sustainability-card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = 'all 0.6s ease';
-            observer.observe(card);
-        });
-
-        // Add bloom effect to flowers
-        setTimeout(() => {
-            document.querySelectorAll('.flower').forEach((flower, index) => {
-                setTimeout(() => {
-                    flower.classList.add('bloom');
-                }, index * 200);
-            });
-        }, 1000);
 
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             });
         });
 
-        // Header background on scroll
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.backgroundColor = 'rgba(248, 244, 233, 0.98)';
-            } else {
-                header.style.backgroundColor = 'rgba(248, 244, 233, 0.95)';
-            }
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.sustainability-card, .glass-card, .story-section').forEach(el => {
+            observer.observe(el);
         });
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            showCookieBar();
+            
+            // Add loading animation
+            document.body.classList.add('loaded');
+            
+            // Animate counters
+            const counters = document.querySelectorAll('.text-4xl.font-bold.text-terracotta');
+            counters.forEach(counter => {
+                const target = counter.textContent;
+                const isNumber = !isNaN(parseInt(target));
+                
+                if (isNumber) {
+                    let current = 0;
+                    const increment = parseInt(target) / 50;
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= parseInt(target)) {
+                            counter.textContent = target;
+                            clearInterval(timer);
+                        } else {
+                            counter.textContent = Math.floor(current) + target.replace(/\d/g, '').slice(-1);
+                        }
+                    }, 50);
+                }
+            });
+        });
+
+        // Add hover effects for cards
+        document.querySelectorAll('.hover-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Add floating animation to key elements
+        setInterval(() => {
+            const floatingElements = document.querySelectorAll('.logo-container');
+            floatingElements.forEach(el => {
+                el.style.transform = `translateY(${Math.sin(Date.now() * 0.001) * 5}px)`;
+            });
+        }, 50);
     </script>
 </body>
 </html>
